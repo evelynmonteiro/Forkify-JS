@@ -98,7 +98,6 @@ const controlAddRecipe = async function(newRecipe) {
 
     // Upload the new rwcipe data
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
 
     // Render recipe
     recipeView.render(model.state.recipe);
@@ -114,7 +113,7 @@ const controlAddRecipe = async function(newRecipe) {
 
     // Close form window
     setTimeout(function(){
-      addRecipeView.toggleWindow()
+      addRecipeView.closeWindow()
     }, MODAL_CLOSE_SEC * 1000);
 
 
